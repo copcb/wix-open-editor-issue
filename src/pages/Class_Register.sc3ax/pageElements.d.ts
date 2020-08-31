@@ -1,0 +1,32 @@
+type PageElementsMap = {
+  "#footer1": $w.Footer;
+  "#image5": $w.Image;
+  "#text151": $w.Text;
+  "#columnStrip12": $w.ColumnStrip;
+  "#column36": $w.Column;
+  "#form3": $w.Form;
+  "#input8": $w.TextInput;
+  "#input9": $w.TextInput;
+  "#textBox3": $w.TextBox;
+  "#button19": $w.Button;
+  "#text152": $w.Text;
+  "#columnStrip19": $w.ColumnStrip;
+  "#column41": $w.Column;
+  "#text165": $w.Text;
+  "#image7": $w.Image;
+  "#image8": $w.Image;
+  "#column43": $w.Column;
+  "#text173": $w.Text;
+  "#text174": $w.Text;
+  "#socialBar6": $w.HiddenCollapsedElement;
+  "#text118": $w.Text;
+  "#header1": $w.Header;
+  "#horizontalMenu2": $w.Menu;
+  "#image3": $w.Image;
+  "#container1": $w.HiddenCollapsedElement;
+  "#profile1": $w.IFrame;
+  "#verticalMenu1": $w.Menu;
+  "#button20": $w.Button;
+  "#accountNavBar1": $w.AccountNavBar;
+  "#text149": $w.Text;
+}

@@ -1,0 +1,11 @@
+// Authentication functions
+import {__isRole, __isAnyRole} from 'backend/Auth/auth-backend-secure';
+
+// isRole - return true if the current user is a member of the role RoleName
+export async function isRole(RoleName) {
+	return __isRole(RoleName);
+}
+
+export async function isAnyRole(RoleNameArray) {
+	return __isAnyRole(RoleNameArray);
+}

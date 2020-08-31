@@ -1,0 +1,193 @@
+{
+    "__version": 2,
+    "wix-data": {
+        "!default": {
+            "siteOwner": {
+                "insert": true,
+                "update": true,
+                "remove": true,
+                "read": true
+            },
+            "siteMember": {
+                "insert": false,
+                "update": false,
+                "remove": false,
+                "read": false
+            },
+            "anonymous": {
+                "insert": false,
+                "update": false,
+                "remove": false,
+                "read": false
+            },
+            "dataOwner": {
+                "update": false,
+                "remove": false,
+                "read": true
+            }
+        }
+    },
+    "web-methods": {
+        "*": {
+            "*": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": true
+                }
+            }
+        },
+        "wix/data-web.jsw": {
+            "*": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": true
+                }
+            }
+        },
+        "backend/coach-register.jsw": {
+            "multiply": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            }
+        },
+        "backend/class-register-backend.jsw": {
+            "coachRegister": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": true
+                }
+            },
+            "ownerRegister": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            },
+            "registerByOwner": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            }
+        },
+        "backend/Member/member-backend.jsw": {
+            "getMember": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            },
+            "getGymnasts": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            }
+        },
+        "backend/Classes/classes-backend.jsw": {
+            "getClasses": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            }
+        },
+        "backend/CovidSurveys/covid-surveys.jsw": {
+            "getSurveys": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            }
+        },
+        "backend/CovidSurveys/covid-surveys-backend.jsw": {
+            "getSurveys": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            },
+            "getSurveysByOwner": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            }
+        },
+        "backend/Gymnasts/gymnasts-backend.jsw": {
+            "getGymnasts": {
+                "siteOwner": {
+                    "invoke": true
+                },
+                "siteMember": {
+                    "invoke": true
+                },
+                "anonymous": {
+                    "invoke": false
+                }
+            }
+        }
+    }
+}

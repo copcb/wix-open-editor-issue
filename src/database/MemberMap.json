@@ -1,0 +1,102 @@
+{
+  "displayName": "Member Map",
+  "permissions": {
+    "insert": "admin",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "MemberMap",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "memberName": {
+      "displayName": "Member Name",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "customerName": {
+      "displayName": "Customer Name",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "privateMemberId": {
+      "displayName": "Member Id",
+      "sortable": true,
+      "referencedCollection": "Members/PrivateMembersData",
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 5
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "customerId": {
+      "displayName": "Customer ID",
+      "sortable": true,
+      "referencedCollection": "Customers",
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 6
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}

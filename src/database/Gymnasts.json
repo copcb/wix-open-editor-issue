@@ -1,0 +1,123 @@
+{
+  "displayName": "Gymnasts",
+  "permissions": {
+    "insert": "admin",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "Gymnasts",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "britishGymnasticsId": {
+      "displayName": "British Gymnastics ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    },
+    "gymnastLastName": {
+      "displayName": "Gymnast Last Name",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 6
+    },
+    "gymnastRegId": {
+      "displayName": "Gymnast Reg Id",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "gymnastFirstName": {
+      "displayName": "Gymnast First Name",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "gymnastFullName": {
+      "displayName": "Gymnast Full Name",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": true,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "memberEmail": {
+      "displayName": "Member Email",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    }
+  },
+  "displayField": "gymnastRegId",
+  "storage": "docstore",
+  "namespace": null
+}

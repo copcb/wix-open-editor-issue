@@ -1,0 +1,10 @@
+// Filename: backend/Classes/classes-backend.jsw (web modules need to have a .jsw extension)
+import {__getClasses, __getClassGymnasts} from 'backend/Classes/classes-backend-secure';
+
+export async function getClasses() {
+	return await __getClasses();
+}
+
+export async function getClassGymnasts(className, dateRange) {
+	return await __getClassGymnasts(className, dateRange);
+}

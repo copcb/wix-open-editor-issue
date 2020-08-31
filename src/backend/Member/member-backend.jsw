@@ -1,0 +1,14 @@
+// Filename: backend/Member/member-backend.jsw (web modules need to have a .jsw extension)
+import {__getMember, __getGymnasts, __getMembersByEmail} from 'backend/Member/member-backend-secure.js';
+
+export async function getMember(id) {
+	return await __getMember(id);
+}
+
+export async function getGymnasts(memberId) {
+	return await __getGymnasts(memberId);
+}
+
+export async function getMembersByEmail(memberEmails) {
+	return await __getMembersByEmail(memberEmails);
+}

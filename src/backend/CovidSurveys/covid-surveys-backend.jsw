@@ -1,0 +1,11 @@
+// Filename: backend/CovidSurveys/covid-surveys.jsw (web modules need to have a .jsw extension)
+
+import {__getSurveys, __getSurveysByOwner} from 'backend/CovidSurveys/covid-surveys-backend-secure';
+
+export async function getSurveys(options) {
+	return await __getSurveys(options);
+}
+
+export async function getSurveysByOwner(ownerId, age) {
+	return await __getSurveysByOwner(ownerId, age);
+}

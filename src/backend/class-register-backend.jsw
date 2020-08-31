@@ -1,0 +1,70 @@
+import wixUsersBackend from 'wix-users-backend';
+import wixData from 'wix-data';
+import {sub} from 'date-fns';
+import {isRole} from 'backend/Auth/auth-backend.jsw';
+import {getMember} from 'backend/Member/member-backend.jsw';
+
+export async function coachRegister() {
+	if (!await isRole('Club Staff')) throw new Error('Unauthorised');
+	
+	// get all recent surveys
+	try {
+		// get all the items, sorted from newest to oldest
+		const {items} = await wixData.query('CovidSurvey')
+			.descending('_updatedDate')
+			.find();
+		
+		// Remove Invalid items. Status is a calculated field, so it can't be queried using wixData calls
+		const filtered = items; //.filter(item => item.status !== 'Invalid');
+		
+
+		// now remove any surveys that have been rendered obsolete by a later survey
+		const result = filtered.reduce((total, value, index, array) => {
+			return total.find((e) =>  e._owner === value._owner)
+				? total
+				: [...total, value];
+			}, []);
+
+		return result;
+	} catch (err) {
+	}
+}
+
+export async function ownerRegister(ownerId) {
+	if (!await isRole('Club Staff')) throw new Error('Unauthorised');
+
+	// console.log('searching ownerRegister:', ownerId);
+	// get all surveys by the owner
+	try {
+		const {items} = await wixData.query('CovidSurvey')
+//			.eq('memberName', 'Yvette Pointon')
+			.eq('_owner', ownerId)
+//			.eq('_owner', ownerId)
+			.descending('_updatedDate')
+			.find();
+		return items;
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+// return the last 14 days of covid registers for the owner
+export async function registerByOwner(ownerId) {
+	if (!await isRole('Club Staff')) throw new Error('Unauthorised');
+
+		const surveyResult = wixData.query('CovidSurvey')
+			.eq('_owner', ownerId)
+			//.ge('_createdDate', sub(new Date(), {weeks:2}))
+			.descending('_updatedDate')
+			.find();
+		
+		const ownerResult = getMember(ownerId);
+		
+		// now wait for both queries to finish
+		const [owner, survey] = await Promise.all([ownerResult, surveyResult]);
+		return {
+			owner,
+			items: survey.items
+		};
+
+}

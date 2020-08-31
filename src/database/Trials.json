@@ -1,0 +1,200 @@
+{
+  "displayName": "Trials",
+  "permissions": {
+    "insert": "anyone",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "Trials",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "emergencyContactName": {
+      "displayName": "Emergency Contact Name",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    },
+    "email": {
+      "displayName": "email",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "gymnastAgeText": {
+      "displayName": "Gymnast Age Text",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 17
+    },
+    "gymnastMedical": {
+      "displayName": "Gymnast Medical Conditions",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 15
+    },
+    "gymnastName": {
+      "displayName": "Gymnast Name",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "gymnastAllergies": {
+      "displayName": "Gymnast Allergies",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 14
+    },
+    "gymnastDateOfBirth": {
+      "displayName": "Gymnast Date of Birth",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 12
+    },
+    "parentName": {
+      "displayName": "Parent or Guardian Name",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "contactNumber": {
+      "displayName": "Contact Number",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 6
+    },
+    "address": {
+      "displayName": "Address",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": true,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "gymnastAge": {
+      "displayName": "Gymnast Age",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "object",
+      "index": 16
+    },
+    "gymnastPreviousExperience": {
+      "displayName": "Gymnast Previous Experience",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 13
+    },
+    "emergencyContactNumber": {
+      "displayName": "Emergency Contact Number",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 11
+    }
+  },
+  "displayField": "email",
+  "storage": "docstore",
+  "namespace": null
+}

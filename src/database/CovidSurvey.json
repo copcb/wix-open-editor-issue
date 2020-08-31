@@ -1,0 +1,188 @@
+{
+  "displayName": "Covid Survey",
+  "permissions": {
+    "insert": "siteMember",
+    "update": "siteMemberAuthor",
+    "remove": "admin",
+    "read": "siteMemberAuthor"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "CovidSurvey",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "health": {
+      "displayName": "Health",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 17
+    },
+    "memberName": {
+      "displayName": "Member Name",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 10
+    },
+    "taste": {
+      "displayName": "Taste",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 7
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "temperature": {
+      "displayName": "Temperature",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 5
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "contact": {
+      "displayName": "Contact",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 13
+    },
+    "travel": {
+      "displayName": "Travel",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 14
+    },
+    "otherInformation": {
+      "displayName": "Other Information",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    },
+    "otherCondition": {
+      "displayName": "Other Conditions",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 8
+    },
+    "status": {
+      "displayName": "Status",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 12
+    },
+    "ownerId": {
+      "displayName": "Owner Id",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 16
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "cough": {
+      "displayName": "Cough",
+      "sortable": true,
+      "pii": false,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "boolean",
+      "index": 6
+    },
+    "memberEmail": {
+      "displayName": "Member Email",
+      "sortable": false,
+      "queryOperators": [
+        "eq"
+      ],
+      "pii": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 11
+    },
+    "newField": {
+      "displayName": "New Field",
+      "sortable": true,
+      "referencedCollection": "Members/PrivateMembersData",
+      "pii": false,
+      "referencingDisplayName": "CovidSurvey",
+      "isDeleted": true,
+      "systemField": false,
+      "referencingFieldKey": "CovidSurvey",
+      "type": "multi-reference",
+      "index": 15
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}

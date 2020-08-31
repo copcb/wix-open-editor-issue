@@ -1,0 +1,6 @@
+// Filename: backend/Gymnasts/gymnasts-backend.jsw (web modules need to have a .jsw extension)
+import {__getGymnasts} from 'backend/Gymnasts/gymnasts-backend-secure';
+
+export async function getGymnasts() {
+	return await __getGymnasts();
+}
